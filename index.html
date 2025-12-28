@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Iin</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- AOS Library CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Inline CSS -->
+    <style>
+        /* Font global */
+        body {
+            font-family: 'Poppins', sans-serif;
+            padding-top: 70px; /* spasi untuk navbar fixed */
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('img/bg-iin.png'); /* Ganti sesuai file kamu */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 150px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* About Section */
+        #about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #0d6efd;
+        }
+
+        #about p {
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #212529;
+        }
+
+        #about span.text-primary {
+            color: #0d6efd;
+            font-weight: 600;
+        }
+
+        #about span.text-danger {
+            color: #dc3545;
+            font-weight: 600;
+        }
+
+        /* Card hover effect */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Contact Section */
+        #contact h2 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        #contact input, #contact textarea {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #contact input:focus, #contact textarea:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 10px rgba(0,123,255,0.5);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Portofolio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">My Hobi</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero text-center text-white" id="hero">
+    <div class="container">
+        <img src="img/foto-iin.jpg" 
+             alt="Foto Profil" 
+             class="rounded-circle mb-4"
+             width="300"
+             data-aos="zoom-in" 
+             data-aos-duration="1200">
+        <h1 class="display-4" data-aos="fade-up" data-aos-duration="1200">Halo, Saya Iin Nurhayatii</h1>
+        <p class="lead" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1200">Sistem Informasi - 05SISE003</p>
+    </div>
+
+    <!-- Overlay & Background -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('img/bg-iin.png'); /* Ganti sesuai file kamu */
+        background-size: cover;
+        background-position: center;
+        opacity: 0.3; /* transparansi supaya foto dan teks terlihat */
+        z-index: 0;
+    "></div>
+</section>
+
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5 bg-warning">
+    <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-down" data-aos-duration="1200">About Me</h2>
+        <div class="row align-items-center">
+            <!-- Foto -->
+            <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="fade-right" data-aos-duration="1200">
+                <img src="img/about-foto.png" alt="Foto Iin" class="img-fluid rounded shadow" style="max-width: 300px;">
+            </div>
+            <!-- Teks -->
+            <div class="col-md-7" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                <p style="font-size: 1.5rem; line-height: 1.8;">
+                    Saya suka <span class="text-primary fw-semibold">belajar hal baru,</span>
+                    mengembangkan skill <span class="text-danger fw-semibold">dan mencoba hal-hal baru lainnya</span>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-success text-white">
+    <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-down" data-aos-duration="1200">My Hobi</h2>
+
+        <!-- Hobi 1 -->
+        <div class="row align-items-center mb-4" data-aos="fade-up" data-aos-duration="1200">
+            <div class="col-md-8">
+                <h5>Menghalu</h5>
+                <p>Realita keras, jadi aku lari ke halu dulu sebentar.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="img/hobi-halu.jpg" alt="Menghalu" class="img-fluid rounded shadow" style="max-width: 200px;">
+            </div>
+        </div>
+
+        <!-- Hobi 2 -->
+        <div class="row align-items-center mb-4" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+            <div class="col-md-8 order-md-1">
+                <h5>Bermain Alat Musik</h5>
+                <p>Di balik nada, ada cerita yang ingin disampaikan.</p>
+            </div>
+            <div class="col-md-4 text-center order-md-2">
+                <img src="img/hobi-musik.jpg" alt="Alat Musik" class="img-fluid rounded shadow" style="max-width: 200px;">
+            </div>
+        </div>
+
+        <!-- Hobi 3 -->
+        <div class="row align-items-center mb-4" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1200">
+            <div class="col-md-8">
+                <h5>Scroll Everybadeh</h5>
+                <p>Kadang kita lebih sering scroll hidup orang lain daripada memperbaiki hidup sendiri.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="img/hobi-scroll.jpg" alt="Scroll" class="img-fluid rounded shadow" style="max-width: 200px;">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-dark text-white">
+    <div class="container">
+        <h2 class="text-center mb-4" data-aos="fade-down" data-aos-duration="1200">Kontak</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Pesan</label>
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Kirim</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">© 2025 Portofolio Iin</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true
+    });
+</script>
+
+</body>
+</html>
